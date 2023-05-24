@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1 class="resource-title">Utenti</h1>
+      <button class="btn btn-success mb-3" onclick="addUser()">Aggiungi utente</button>
+    </header>
+
+    <div class="table-container">
+      
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Telefono</th>
+            <th>Città</th>
+            <th>Azienda</th>
+            <th>Azioni</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="users-table-body">
+
+        </tbody>
+
+      </table>
+
+    </div>
+    
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+  </body>
+
+</html>
