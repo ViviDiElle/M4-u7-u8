@@ -10,7 +10,7 @@ async function getToken() {
         })
         const data = await response.json()
         // prodottiAggiunti = data
-        // cardProdact(prodottiAggiunti)
+        // cardProduct(prodottiAggiunti)
         setTimeout(() => {
             document.querySelector('.spinner-container').classList.add("d-none")
             cardProdact(data);
@@ -25,7 +25,7 @@ async function getToken() {
 getToken()
 
 let prodottiAggiunti = null
-function cardProdact(prodottiAggiunti) {
+function cardProduct(prodottiAggiunti) {
     let container = document.getElementById('prodotti')
     prodottiAggiunti.forEach((element) => {
         let col = document.createElement('div')
@@ -51,7 +51,7 @@ function cardProdact(prodottiAggiunti) {
             <i class="me-3 fa-solid fa-cart-plus"></i> 
             Aggiungi al carrello 
             </button>
-            <button onclick="visualizzaProdoto('${element._id}')" class="btn btn-sm btn-outline-secondary btn-nascondi d-flex align-items-center justify-content-center">
+            <button onclick="visualizzaProdotto('${element._id}')" class="btn btn-sm btn-outline-secondary btn-nascondi d-flex align-items-center justify-content-center">
             <i class=" me-3 fa-solid fa-eye"></i> 
             Visualizza il prodotto
             </button>
@@ -62,7 +62,7 @@ function cardProdact(prodottiAggiunti) {
     });
 }
 
-function visualizzaProdoto(elem) {
+function visualizzaProdotto(elem) {
     window.location.href = `prodotto.html?id=${elem}`
 }
 
